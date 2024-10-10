@@ -7,8 +7,10 @@ The **Employee Management System** is a Spring Boot application that provides fu
 - Admin can register users with company email and password.
 - Employees can log in and view their details.
 - Admin can manage employee information (create, view, update, delete).
-- Role-based access: Admin and User roles.
+- **Role-based access:** Admin and User roles.
 - Secure password handling with encryption.
+- **Role Management:** Allow admins to assign and manage roles for different users.
+- **Employee Projects:** Track and manage projects for employees.
   
 ## Technologies Used
 - **Java 17**
@@ -17,7 +19,7 @@ The **Employee Management System** is a Spring Boot application that provides fu
 - **Thymeleaf** for server-side rendering
 - **MySQL Database** for database services
 - **Spring Security** for authentication and authorization 
-- BCrypt is used to encode and store passwords securely.
+- **BCrypt** is used to encode and store passwords securely.
 - **IDE** can be used **Eclipse, VS code, IntellIj**
 
 ## Project Structure
