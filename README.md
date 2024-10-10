@@ -35,10 +35,9 @@ The **Employee Management System** is a Spring Boot application that provides fu
 - *User Dashboard*
 
 ## LIST
-- **A list people Who have contributed to this project**
+A list people Who have contributed to this project
 
 ## Contact Table
-|-------------------------------|----------------------------------|
 | Name                          | Email                            |
 |-------------------------------|----------------------------------|
 | Sachin Ramu Rathod            | Sachinrathod8088@gmail.com       |
