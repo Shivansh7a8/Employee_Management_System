@@ -1,5 +1,8 @@
 # Employee Management System
 - FullStack Java Project
+- RBA file contains the single file with Backend and Frontend implemented.
+- Back_End file contains only backend part
+- front_End file contains frontend part with **application.properties** file for Database...
 ## Overview
 The **Employee Management System** is a Spring Boot application that provides functionalities for user registration, employee management, and administrative tasks. Admins can register users and employees, and employees can log in and access their personal details.
 
