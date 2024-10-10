@@ -1,7 +1,5 @@
-# Employee_Management_System
-FullStack Java Project
 # Employee Management System
-
+- FullStack Java Project
 ## Overview
 The **Employee Management System** is a Spring Boot application that provides functionalities for user registration, employee management, and administrative tasks. Admins can register users and employees, and employees can log in and access their personal details.
 
