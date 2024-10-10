@@ -25,7 +25,14 @@ The **Employee Management System** is a Spring Boot application that provides fu
 - **Spring Security** for authentication and authorization 
 - **BCrypt** is used to encode and store passwords securely.
 - **IDE** can be used **Eclipse, VS code, IntellIj**
-
+## Pages
+- *Login*
+- *Admin Dashboard*
+- *Add Employee*
+- *Edit Employee*
+- *view employee details*
+- *Register New User*
+- *User Dashboard*
 ## Project Structure
 
 ```bash
