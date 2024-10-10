@@ -51,3 +51,23 @@ src/
 │       └── static/               # Static files (CSS, JS)
 └── test/
     └── java/com/excelr/          # Unit and integration tests
+
+
+## LIST
+- **A list people Who have contributed to this project**
+
+## Contact Table
+
+| Name                         | Email                            |
+|------------------------------|----------------------------------|
+| Sachin Ramu Rathod            | Sachinrathod8088@gmail.com       |
+| Sahil Ramkisan Kshirsagar     | sahilkshirsagar27@gmail.com      |
+| SANDI Shivani                 | shivanisandi2002@gmail.com       |
+| Saurabh Prakash               | saurabhprakash7777@gmail.com     |
+| Shivansh Shukla               | shuklashivansh3998@gmail.com     |
+| Shreya Mittapalli             | shreyamittapelli@gmail.com       |
+| Sonal Janardan Mhatre         | sonalmhatre1411@gmail.com        |
+| Sneha Rajkumar Bembalge       | snehabembalge01@gmail.com        |
+| Vamshi Krishnan               | vamshiveera116@gmail.com         |
+
+
