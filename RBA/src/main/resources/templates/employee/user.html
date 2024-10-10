@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #45b6fe;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 10px auto;
+            padding: 5px;
+            background-image:url("https://img.freepik.com/premium-photo/grainy-gradient-background-red-white-blue-colors-with-soft-faded-watercolor-border-texture_927344-24167.jpg");
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        h2 {
+            color: rgb(0, 255, 128);
+        }
+        h5{
+        color:rgb(128, 128, 128);}
+        
+        .container1 {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+        }
+        .tabs button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .tabs button.active {
+            background-color: #0056b3;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        h3{
+        text-align: right;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        p{
+        color:black;}
+
+        /* Add more styles and components for your dashboard here */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Employee Dashboard</h1>
+        <div class="logout" >
+        <a th:href="@{/logout}">
+         Logout
+        </a>
+        </div>
+    </div>
+    <div class="container">
+    <h2 class="text-center text-success">Welcome! <i><span th:text="${employee.fullName}"></span></i> </h2>
+    </div>
+        <div class="container1">
+        <div class="tabs">
+            <button id="personalBtn" class="active" onclick="showForm('personal')">Personal Details</button>
+            <button id="personalBtn"  onclick="showForm('professional')">Professional Details</button>
+            <button id="personalBtn"  onclick="showForm('finance')">Finance Details</button>
+            <button id="personalBtn"  onclick="showForm('project')">Project Details</button>
+        </div>
+        <div id="personal" class="form-section active">
+            <div class="card mt-4">
+                <div class="card-body">
+                <p><strong>Employee ID:</strong><span th:text="${employee.empId}"></span></p>
+                    <p><strong>Full Name:</strong> <span th:text="${employee.fullName}"></span></p>
+                    <p><strong>Email:</strong><span th:text="${employee.personalEmail}"></span> </p>
+                    <p><strong>Phone:</strong> <span th:text="${employee.mobile}"></span></p>
+                    <p><strong>Gender:</strong> <span th:text="${employee.gender}"></span></p>
+                    <p><strong>Age:</strong> <span th:text="${employee.age}"></span></p>
+                    <p><strong>D.O.B:</strong> <span th:text="${employee.dob}"></span></p>
+                    <p><strong>Emergency Contact Person:</strong> <span th:text="${employee.emergencyContactName}"></span></p>
+                    <p><strong>Emergency Mob.no</strong> <span th:text="${employee.emergencyContactMob_no}"></span></p>
+                    <h5 class="mt-4"><u><b>Current Address</b></u></h5>
+        			<p><strong>Address</strong> <span th:text="${employee.caddressLine1}"></span><span th:text="${employee.caddressLine2}"></span></p>
+        			<p><strong>City</strong> <span th:text="${employee.city1}"></span></p>
+        			<p><strong>Pin Code</strong> <span th:text="${employee.pinCode1}"></span></p>
+        			<h5 class="mt-4"><u><b>Permanent Address</b></u></h5>
+        			<p><strong>Address</strong> <span th:text="${employee.paddressLine1}"></span><span th:text="${employee.paddressLine2}"></span></p>
+        			<p><strong>City</strong> <span th:text="${employee.city2}"></span></p>
+        			<p><strong>Pin Code</strong> <span th:text="${employee.pinCode2}"></span></p>
+        			</div>
+        			</div>
+        			</div>
+       <div id="professional" class="form-section">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <p><strong>Company Email:</strong> <span th:text="${employee.companyMail}"></span></p>
+                    <p><strong>Office Phone:</strong> <span th:text="${employee.officePhone}"></span></p>
+                    <p><strong>Reporting Manager:</strong> <span th:text="${employee.reportingManager}"></span></p>
+                    <p><strong>HR Name:</strong> <span th:text="${employee.hrName}"></span></p>
+                    <p><strong>Date of Joining:</strong> <span th:text="${employee.dateOfJoining}"></span></p>
+                    <p><strong>Reporting Manager Code:</strong> <span th:text="${employee.reportingManagerCode}"></span></p>
+                    <h5 class="mt-4"><u><b>Employment History</b></u></h5>
+        			<p><strong>Company Name:</strong> <span th:text="${employee.companyName}"></span></p>
+        			<p><strong>Joining Date:</strong> <span th:text="${employee.joiningDate}"></span></p>
+        			<p><strong>End Date:</strong> <span th:text="${employee.endDate1}"></span></p>
+        			<h5 class="mt-4"><u>Office Address</u></h5>
+        			<p><strong>Address:</strong> <span th:text="${employee.addressLine1}"></span><span th:text="${employee.addressLine2}"></span></p>
+        			<p><strong>City:</strong> <span th:text="${employee.city}"></span></p>
+        			<p><strong>Pin Code:</strong> <span th:text="${employee.pinCode}"></span></p>
+        			</div>
+        			</div>
+        			</div>
+        			
+       <div id="finance" class="form-section">
+            <div class="card mt-4">
+                <div class="card-body">
+                <p><strong>Pan Number:</strong><span th:text="${employee.PanCard}"></span></p>
+                <p><strong>Aadhar Number:</strong><span th:text="${employee.AadharCard}"></span> </p>
+                    <p><strong>Bank Name:</strong> <span th:text="${employee.bankName}"></span></p>
+                    <p><strong>Branch Name:</strong> <span th:text="${employee.branch}"></span></p>
+                    <p><strong>IFSC Code:</strong> <span th:text="${employee.ifscCode}"></span></p>
+                    <p><strong>CTC BreakUp:</strong><span th:text="${employee.CtcBreakup}"></span> </p>
+   <!--                  <a href="https://www.tankhapay.com/blog/wp-content/uploads/2023/10/Salary-Slip-pdf.pdf" </a>-->
+                    <a href="https://shorturl.at/CX5Lf" target="_blank" > Salary Payslip (PDF)</a>
+        			</div>
+        			</div>
+        			</div>
+       <div id="project" class="form-section">
+            <div class="card mt-4">
+                <div class="card-body">
+                <p><strong>Project Code:</strong> <span th:text="${employee.projectCode}"></span></p>
+                    <p><strong>Project Name:</strong> <span th:text="${employee.clientProjectName}"></span></p>
+                    <p><strong>Start Date:</strong> <span th:text="${employee.startDate}"></span></p>
+                    <p><strong>End Date:</strong> <span th:text="${employee.endDate}"></span></p>
+                    <p><strong>Reporting Manager:</strong> <span th:text="${employee.reportingManager}"></span></p>
+        			</div>
+        			</div>
+        			</div>
+        	</div>
+        	<!-- add attribute -->
+    <script>
+    function showForm(formId) {
+        // Hide all form sections
+        var forms = document.getElementsByClassName('form-section');
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].classList.remove('active');
+        }
+
+        // Show the selected form section
+        document.getElementById(formId).classList.add('active');
+
+        // Remove active class from all buttons
+        var buttons = document.querySelectorAll('.tabs button');
+        buttons.forEach(button => button.classList.remove('active'));
+
+        // Add active class to the clicked button
+        document.getElementById(formId + 'Btn').classList.add('active');
+    }
+</script>				
+    <!-- <a class="nav-link active" href="/message">View Details</a> -->
+</body>
+</html>
